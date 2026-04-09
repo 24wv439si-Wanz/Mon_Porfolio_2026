@@ -222,3 +222,260 @@ footer a:hover {
     color: var(--orange_vif);
     transform: translateY(-3px);
 }
+
+/* --- Styles Page Contact --- */
+
+.contact-container {
+    max-width: 900px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.contact-content {
+    display: flex;
+    gap: 4rem;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+}
+
+.contact-info h3 {
+    color: var(--violet_doux);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    color: var(--gris_fonce);
+    font-size: 1.1rem;
+}
+
+.social-apps {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gris_clair);
+}
+
+.apps-links a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: var(--gris_trés_clai);
+    color: var(--violet_doux);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.apps-links a:hover {
+    background-color: var(--violet_doux);
+    color: white;
+}
+
+/* Styles du Formulaire */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--gris_fonce);
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--gris_clair);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--violet_doux);
+}
+
+.contact-form button {
+    width: 100%;
+    background-color: var(--violet_doux);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+}
+
+.contact-form button:hover {
+    background-color: var(--viole_fonce);
+}
+
+/* Adaptabilité Mobile */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+}
+
+.contact-info p i {
+    color: var(--violet_doux);
+    width: 25px; /* Pour que les icônes soient bien alignées verticalement */
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* ============================================================
+   PAGE RÉALISATIONS (STYLE MAQUETTE)
+   ============================================================ */
+
+/* Titre et Barre décorative */
+.page-title {
+    text-align: center;
+    color: var(--violet_doux);
+    font-size: 2.5rem;
+    margin-top: 4rem;
+}
+
+.title-underline {
+    width: 50px;
+    height: 4px;
+    background-color: var(--violet_doux);
+    margin: 15px auto 3rem;
+    border-radius: 2px;
+}
+
+/* Grille de projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+    padding: 0 20px;
+}
+
+/* Carte de projet */
+.project-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Ombre légère de la maquette */
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(108, 99, 255, 0.15); /* Ombre violette au survol */
+}
+
+/* Images des projets */
+.project-card img {
+    width: 100%;
+    height:250px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--viole_fonce);
+}
+
+/* Corps de la carte */
+.project-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-body h3 {
+    color: var(--violet_doux);
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-body p {
+    color: var(--gris_fonce);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Pousse les tags et le footer vers le bas */
+}
+
+/* Badges / Tags (Arduino, Fritzing, etc.) */
+.tags {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background-color: #F0EFFF; /* Fond violet très clair de la maquette */
+    color: var(--violet_doux);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Pied de carte (Liens Code & Démo) */
+.project-footer {
+    border-top: 1px solid #eee;
+    padding: 1rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-footer a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Espace entre l'icône et le texte */
+    transition: color 0.2s;
+}
+
+.project-footer a i {
+    font-size: 1rem;
+}
+
+.project-footer a:hover {
+    color: var(--violet_doux);
+}
+
+/* Responsive : 1 seule colonne sur petit mobile */
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+}
