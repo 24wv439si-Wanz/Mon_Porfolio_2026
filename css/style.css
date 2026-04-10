@@ -86,7 +86,7 @@ a.active::after {
     align-items: center;
     gap: 5rem;
     text-align: center;
-    margin-top: 10rem 2rem;
+    margin: 10rem 2rem;
 }
 
 .hero img {
@@ -178,7 +178,6 @@ section h2::after {
 }
 
 .competences table tbody td {
-    /*Ajoute ube bordure de 1xp en bas de chaque cellule*/
     border-bottom: 1px solid var(--gris_clair);
 }
 
@@ -223,7 +222,7 @@ footer a:hover {
     transform: translateY(-3px);
 }
 
-/* --- Styles Page Contact --- */
+/* --- Styles Page Contact (Inchangé) --- */
 
 .contact-container {
     max-width: 900px;
@@ -281,7 +280,6 @@ footer a:hover {
     color: white;
 }
 
-/* Styles du Formulaire */
 .form-group {
     margin-bottom: 1.5rem;
     text-align: left;
@@ -327,7 +325,6 @@ footer a:hover {
     background-color: var(--viole_fonce);
 }
 
-/* Adaptabilité Mobile */
 @media (max-width: 768px) {
     .contact-content {
         flex-direction: column;
@@ -338,28 +335,31 @@ footer a:hover {
 
 .contact-info p i {
     color: var(--violet_doux);
-    width: 25px; /* Pour que les icônes soient bien alignées verticalement */
+    width: 25px;
     margin-right: 10px;
     font-size: 1.1rem;
 }
 
-   PAGE RÉALISATIONS (STYLE MAQUETTE)
+/* ============================================================
+   SECTION CORRIGÉE : RÉALISATIONS, PASSIONS, DIVERTISSEMENT
    ============================================================ */
 
-/* Titre et Barre décorative */
+/* Correction : Titres centrés pour ces 3 pages */
 .page-title {
     text-align: center;
     color: var(--violet_doux);
     font-size: 2.5rem;
     margin-top: 4rem;
+    width: 100%;
 }
 
 .title-underline {
     width: 50px;
     height: 4px;
     background-color: var(--violet_doux);
-    margin: 15px auto 3rem;
+    margin: 15px auto 3rem; /* "auto" garantit le centrage horizontal */
     border-radius: 2px;
+    display: block;
 }
 
 /* Grille de projets */
@@ -372,12 +372,11 @@ footer a:hover {
     padding: 0 20px;
 }
 
-/* Carte de projet */
 .project-card {
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Ombre légère de la maquette */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border: 1px solid #f0f0f0;
     display: flex;
     flex-direction: column;
@@ -386,18 +385,16 @@ footer a:hover {
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(108, 99, 255, 0.15); /* Ombre violette au survol */
+    box-shadow: 0 12px 30px rgba(108, 99, 255, 0.15);
 }
 
-/* Images des projets */
 .project-card img {
     width: 100%;
-    height:250px;
+    height: 250px;
     object-fit: cover;
-    border-bottom: 2px solid var(--viole_fonce);
+    border-bottom: 2px solid var(--violet_doux);
 }
 
-/* Corps de la carte */
 .project-body {
     padding: 1.5rem;
     display: flex;
@@ -416,10 +413,9 @@ footer a:hover {
     font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    flex-grow: 1; /* Pousse les tags et le footer vers le bas */
+    flex-grow: 1;
 }
 
-/* Badges / Tags (Arduino, Fritzing, etc.) */
 .tags {
     margin-bottom: 1.2rem;
     display: flex;
@@ -428,7 +424,7 @@ footer a:hover {
 }
 
 .tags span {
-    background-color: #F0EFFF; /* Fond violet très clair de la maquette */
+    background-color: #F0EFFF;
     color: var(--violet_doux);
     padding: 4px 12px;
     border-radius: 20px;
@@ -437,7 +433,6 @@ footer a:hover {
     text-transform: uppercase;
 }
 
-/* Pied de carte (Liens Code & Démo) */
 .project-footer {
     border-top: 1px solid #eee;
     padding: 1rem 0 0 0;
@@ -453,31 +448,15 @@ footer a:hover {
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 6px; /* Espace entre l'icône et le texte */
+    gap: 6px;
     transition: color 0.2s;
-}
-
-.project-footer a i {
-    font-size: 1rem;
 }
 
 .project-footer a:hover {
     color: var(--violet_doux);
 }
 
-/* Responsive : 1 seule colonne sur petit mobile */
-@media (max-width: 480px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .page-title {
-        font-size: 2rem;
-    }
-}
-
-/* --- Styles Page Divertissement (Icônes uniquement) --- */
-
+/* Grille Divertissement */
 .entertainment-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -506,11 +485,10 @@ footer a:hover {
     border-color: var(--violet_doux);
 }
 
-/* Le cercle contenant l'icône */
 .ent-icon {
     width: 90px;
     height: 90px;
-    background-color: #F0EFFF; /* Mauve très clair cohérent avec tes tags projets */
+    background-color: #F0EFFF;
     color: var(--violet_doux);
     font-size: 2.8rem;
     display: flex;
@@ -518,37 +496,17 @@ footer a:hover {
     align-items: center;
     border-radius: 50%;
     margin-bottom: 1.5rem;
-    transition: all 0.3s ease;
 }
 
-/* Effet au survol de la carte sur l'icône */
 .ent-card:hover .ent-icon {
     background-color: var(--violet_doux);
     color: white;
-    transform: rotate(10deg);
 }
 
-.ent-card h3 {
-    color: var(--violet_doux);
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-}
+.ent-card h3 { color: var(--violet_doux); margin-bottom: 1rem; font-size: 1.4rem; }
+.ent-card p { color: var(--gris_fonce); font-size: 0.95rem; }
 
-.ent-card p {
-    color: var(--gris_fonce);
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    .entertainment-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* --- Styles Page Passion (Icônes uniquement) --- */
-
+/* Grille Passions */
 .passions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -585,7 +543,6 @@ footer a:hover {
     align-items: center;
     border-radius: 50%;
     margin: 0 auto 1.5rem;
-    transition: all 0.3s ease;
 }
 
 .pass-card:hover .pass-icon {
@@ -593,22 +550,87 @@ footer a:hover {
     color: white;
 }
 
-.pass-card h3 {
-    color: var(--violet_doux);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
+.pass-card h3 { color: var(--violet_doux); margin-bottom: 1rem; font-size: 1.5rem; font-weight: 700; }
+.pass-card p { color: var(--gris_fonce); font-size: 1rem; }
 
-.pass-card p {
-    color: var(--gris_fonce);
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* Ajustement pour l'affichage mobile */
+/* Responsive Media Queries */
 @media (max-width: 600px) {
-    .passions-grid {
+    .projects-grid, .entertainment-grid, .passions-grid {
         grid-template-columns: 1fr;
     }
+    .page-title { font-size: 2rem; }
 }
+
+/* ============================================================
+   MODE SOMBRE (Inchangé)
+   ============================================================ */
+
+[data-theme="dark"] {
+    --gris_trés_clai: #121212;
+    --gris_clair: #333;
+    --gris_fonce: #bbb;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+[data-theme="dark"] body {
+    background-color: #121212;
+    color: white;
+}
+
+[data-theme="dark"] header, 
+[data-theme="dark"] .project-card, 
+[data-theme="dark"] .pass-card, 
+[data-theme="dark"] .ent-card,
+[data-theme="dark"] .contact-content,
+[data-theme="dark"] .competences table {
+    background-color: #1e1e1e;
+    border-color: #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .project-footer { border-top-color: #333; }
+[data-theme="dark"] .project-footer a { color: #eee; }
+[data-theme="dark"] .competences table tbody tr:hover { background-color: #2a2a2a; }
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+.theme-switch input { display:none; }
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7px;
+}
+.slider i { color: #f1c40f; font-size: 14px; }
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+    z-index: 2;
+}
+input:checked + .slider { background-color: var(--violet_doux); }
+input:checked + .slider:before { transform: translateX(26px); }
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
